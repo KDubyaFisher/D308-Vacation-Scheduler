@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VacationScheduler">
         <activity
+            android:name=".UI.VacationList"
+            android:exported="false" />
+        <activity
             android:name=".UI.MainActivity"
             android:exported="true">
             <intent-filter>
