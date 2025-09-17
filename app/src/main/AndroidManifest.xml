@@ -13,9 +13,11 @@
         android:theme="@style/Theme.VacationScheduler">
         <activity
             android:name=".UI.VacationList"
+            android:label="Vacation List"
             android:exported="false" />
         <activity
             android:name=".UI.MainActivity"
+            android:label="Vacation Scheduler"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
