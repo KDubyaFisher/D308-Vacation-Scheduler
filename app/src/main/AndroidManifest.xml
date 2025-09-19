@@ -13,6 +13,8 @@
         android:theme="@style/Theme.VacationScheduler">
         <activity
             android:name=".UI.ExcursionDetails"
+            android:label="Excursion Details"
+            android:parentActivityName=".UI.VacationDetails"
             android:exported="false" />
         <activity
             android:name=".UI.VacationDetails"
