@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kwfisher.vacationscheduler.R;
 import com.kwfisher.vacationscheduler.database.Repository;
+import com.kwfisher.vacationscheduler.entities.Excursion;
 import com.kwfisher.vacationscheduler.entities.Vacation;
 
 public class VacationList extends AppCompatActivity {
@@ -53,8 +54,20 @@ public class VacationList extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.add_sample_code_option) {
+            repository = new Repository(getApplication());
             // Toast.makeText(this, "put in sample data", Toast.LENGTH_SHORT).show();
             Vacation vacation = new Vacation(0, "Mexico Birthday Trip", "Hotel Xcaret", "11/15/2024", "11/20/2024");
+            repository.insert(vacation);
+            vacation = new Vacation(0, "Vegas Trip", "Ceaser's Palace", "03/24/2023", "04/01/2023");
+            repository.insert(vacation);
+
+            Excursion excursion = new Excursion(0, "Jungle Hike", "11/18/2024", 1);
+            repository.insert(excursion);
+
+            excursion = new Excursion(0, "Beach Day", "11/19/2024", 1);
+            repository.insert(excursion);
+
+
             return true;
         }
         if(item.getItemId()== android.R.id.home){
