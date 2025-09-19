@@ -16,10 +16,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kwfisher.vacationscheduler.R;
+import com.kwfisher.vacationscheduler.database.Repository;
 import com.kwfisher.vacationscheduler.entities.Vacation;
 
 public class VacationList extends AppCompatActivity {
 
+    private Repository repository;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
