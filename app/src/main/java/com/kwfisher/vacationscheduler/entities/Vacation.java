@@ -12,4 +12,12 @@ public class Vacation {
     private String vacationLodging;
     private String vacationStartDate;
     private String vacationEndDate;
+
+    public Vacation(int id, String vacationTitle, String vacationLodging, String vacationStartDate, String vacationEndDate) {
+        this.id = id;
+        this.vacationTitle = vacationTitle;
+        this.vacationLodging = vacationLodging;
+        this.vacationStartDate = vacationStartDate;
+        this.vacationEndDate = vacationEndDate;
+    }
 }
