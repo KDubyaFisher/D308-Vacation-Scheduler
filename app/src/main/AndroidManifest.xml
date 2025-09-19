@@ -14,10 +14,12 @@
         <activity
             android:name=".UI.VacationDetails"
             android:label="Vacation Details and Excursion List"
+            android:parentActivityName=".UI.VacationList"
             android:exported="false" />
         <activity
             android:name=".UI.VacationList"
             android:exported="false"
+            android:parentActivityName=".UI.MainActivity"
             android:label="Vacation List" />
         <activity
             android:name=".UI.MainActivity"
