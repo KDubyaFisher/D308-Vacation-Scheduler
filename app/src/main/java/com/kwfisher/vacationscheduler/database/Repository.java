@@ -1,5 +1,7 @@
 package com.kwfisher.vacationscheduler.database;
 
+import android.app.Application;
+
 import com.kwfisher.vacationscheduler.dao.ExcursionDAO;
 import com.kwfisher.vacationscheduler.dao.VacationDAO;
 import com.kwfisher.vacationscheduler.entities.Excursion;
@@ -19,4 +21,11 @@ public class Repository {
 
     private static int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
+
+
+    public Repository(Application application){
+        VacationDatabaseBuilder db = VacationDatabaseBuilder.getDatabase(application);
+        mVacationDAO = db.vacationDAO();
+        mExcursionDAO = db.excursionDAO();
+    }
 }
