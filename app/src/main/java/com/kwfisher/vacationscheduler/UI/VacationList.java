@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kwfisher.vacationscheduler.R;
+import com.kwfisher.vacationscheduler.entities.Vacation;
 
 public class VacationList extends AppCompatActivity {
 
@@ -50,7 +51,8 @@ public class VacationList extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.add_sample_code_option) {
-            Toast.makeText(this, "put in sample data", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, "put in sample data", Toast.LENGTH_SHORT).show();
+            Vacation vacation = new Vacation(0, "Mexico Birthday Trip", "Hotel Xcaret", "11/15/2024", "11/20/2024");
             return true;
         }
         if(item.getItemId()== android.R.id.home){
